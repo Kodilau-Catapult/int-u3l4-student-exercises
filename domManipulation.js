@@ -8,12 +8,39 @@ let myName = document.querySelector('.name');
 let myHobby = document.querySelector('.hobby');
 let myLocation = document.querySelector('.location');
 let image = document.querySelector('.image');
+let toggle = true
+
 
 
 // CODE ALONG
 // 1. An event listener is provided for the `contentButton`
 // 2. When clicked, it should change the content of:
 //   - The `name` header.
+contentButton.addEventListener('click', function(){
+if(toggle == true)
+{
+myName.innerHTML = "My Name is Kim Jong Un";
+myHobby.innerHTML = "I like listening to Katy Perry";
+myLocation.innerHTML = "I live in True Korea";
+image.src = "https://media-cldnry.s-nbcnews.com/image/upload/newscms/2016_19/1534611/160512-kim-jong-un-mn-1120.JPG";
+toggle = false;
+}
+else
+{
+myName.innerHTML = "My Name is Dave Skylark";
+myHobby.innerHTML = "I like listening to Katy Perry as well!";
+myLocation.innerHTML = "I live in New York";
+image.src = "https://www.heatherfarah.com/wp-content/uploads/2015/05/skylark-thumb-01.jpg";
+toggle = true;
+}
+
+
+})
+contentButton.addEventListener("keypress", function() {
+
+})
+
+
 
 // -- RETURN TO LESSON --
 
